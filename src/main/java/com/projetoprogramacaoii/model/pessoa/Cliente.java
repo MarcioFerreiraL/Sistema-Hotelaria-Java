@@ -5,7 +5,7 @@ import com.projetoprogramacaoii.model.Identificacao;
 
 public class Cliente extends Usuario implements Identificacao {
 
-    private String cpf;
+    private static String cpf;
     private LocalDate dataNascimento;
 
     public Cliente(String nome, String email, String senha, String cpf, LocalDate dataNascimento) {
@@ -20,10 +20,6 @@ public class Cliente extends Usuario implements Identificacao {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
@@ -36,12 +32,11 @@ public class Cliente extends Usuario implements Identificacao {
         // A lógica disso ficaria no Controller/Service
     }
     
-    @Override
     public String getIdentificacao() {
         return String.format(
                 "nome: %s\n" + 
                 "cpf: %s\n",
-                nome, cpf
+                nome, getId()
         );
     }
     

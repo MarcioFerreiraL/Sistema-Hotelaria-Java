@@ -1,12 +1,11 @@
 package com.projetoprogramacaoii.model.reserva;
 
 public class Quarto {
-	private int numero;
+	private static int numero;
 	private TipoQuarto tipoQuarto;
 	private boolean ocupado;
 	
 	public Quarto(int numero, TipoQuarto tipo, boolean ocupado) {
-		super();
 		this.numero = numero;
 		this.tipoQuarto = tipo;
 		this.ocupado = ocupado;

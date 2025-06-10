@@ -24,22 +24,23 @@ public class ReservaService {
     }
 
     public Reserva criarReserva(String clienteCpf, int numeroQuarto, LocalDate dataReserva, FormaPagamento formaPagamento) {
-        // 1. Busca as entidades
+        // Busca as entidades
         Cliente cliente = clienteRepository.encontrarId(clienteCpf);
-        
         Quarto quarto = quartoRepository.encontrarId(numeroQuarto);
         
-        // 2. Aplica as regras de negócio
+        // verifica se a idade é maior que 18
         if (Period.between(cliente.getDataNascimento(), LocalDate.now()).getYears() < 18) {
             throw new IllegalStateException("Cliente deve ser maior de 18 anos para fazer uma reserva.");
         }
         
-        if (quarto.isOcupado()) {
+        // ver se o quarto esta ocupado
+        
+        if (quarto.isOcupado() == true) {
             throw new IllegalStateException("Quarto " + numeroQuarto + " já está ocupado.");
         }
 
         // 3. Orquestra as ações
-        Reserva novaReserva = new Reserva();
+        Reserva novaReserva = new Reserva((Cliente.cpf + Quarto.numero), cliente, quarto, dataReserva, formaPagamento);
         novaReserva.setCliente(cliente);
         novaReserva.setQuarto(quarto);
         novaReserva.setData(dataReserva);
