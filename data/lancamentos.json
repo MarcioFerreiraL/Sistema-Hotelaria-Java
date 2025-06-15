@@ -1,0 +1,292 @@
+[
+  {
+    "tipoLancamento": "DESPESA",
+    "descricao": "Salario do funcionario Sr. Luiz Gustavo da Paz, cargo Gerente",
+    "valor": 5733.2
+  },
+  {
+    "tipoLancamento": "DESPESA",
+    "descricao": "Salario do funcionario Isabelly da Conceição, cargo Recepcionista",
+    "valor": 2686.26
+  },
+  {
+    "tipoLancamento": "DESPESA",
+    "descricao": "Salario do funcionario Maria Fernanda da Mota, cargo Camareira",
+    "valor": 2182.88
+  },
+  {
+    "tipoLancamento": "DESPESA",
+    "descricao": "Salario do funcionario Sra. Alícia Jesus, cargo Cozinheiro",
+    "valor": 2697.16
+  },
+  {
+    "tipoLancamento": "DESPESA",
+    "descricao": "Salario do funcionario Sr. Davi Lucca Nunes, cargo Manobrista",
+    "valor": 2420.08
+  },
+  {
+    "tipoLancamento": "DESPESA",
+    "descricao": "Salario do funcionario Dra. Valentina da Mata, cargo Segurança",
+    "valor": 2575.9
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 108 para o cliente Cecília da Mota",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 103 para o cliente Sra. Maria Eduarda Fogaça",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 315 para o cliente Luiz Felipe Barros",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 211 para o cliente Dr. Erick da Paz",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 222 para o cliente Heloísa Moreira",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 221 para o cliente Lorena Nunes",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 116 para o cliente Srta. Manuela Ribeiro",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 311 para o cliente Elisa da Paz",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 302 para o cliente Cecília da Mota",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 219 para o cliente Lorena Nunes",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 114 para o cliente Sra. Ana Luiza da Rocha",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 205 para o cliente Sr. Francisco Jesus",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 310 para o cliente Cecília Rezende",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 227 para o cliente Sra. Alana Farias",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 226 para o cliente Bryan Gonçalves",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 220 para o cliente Dr. Luiz Otávio da Paz",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 102 para o cliente Heloísa Moreira",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 229 para o cliente Cecília da Conceição",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 206 para o cliente Sra. Ana Júlia da Costa",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 225 para o cliente Davi Lucca Rezende",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 106 para o cliente Rebeca da Conceição",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 210 para o cliente Melissa da Rocha",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 119 para o cliente Dr. Luiz Otávio da Paz",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 208 para o cliente Helena da Rocha",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 218 para o cliente Elisa da Mata",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 304 para o cliente Sra. Stella Aragão",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 201 para o cliente Yuri Rezende",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 317 para o cliente Levi da Conceição",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 306 para o cliente Lavínia da Mata",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 128 para o cliente Marcelo Nogueira",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 203 para o cliente Maria Alice Peixoto",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 126 para o cliente Maria Alice Peixoto",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 214 para o cliente Isabelly Jesus",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 104 para o cliente Dra. Maria Alice Jesus",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 213 para o cliente Clarice Caldeira",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 303 para o cliente Mariane da Conceição",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 127 para o cliente Heloísa da Paz",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 130 para o cliente Sra. Laís da Rosa",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 209 para o cliente Kevin da Mata",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 239 para o cliente Dra. Alana Fogaça",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 109 para o cliente Davi Jesus",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 305 para o cliente Ana Luiza Farias",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 228 para o cliente Nathan da Mota",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 301 para o cliente Srta. Alana da Mota",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 316 para o cliente Ana Luiza Farias",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 115 para o cliente Sra. Rebeca Jesus",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 212 para o cliente João Gabriel da Mota",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 111 para o cliente Davi Lucca Rezende",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 101 para o cliente Sra. Stella Aragão",
+    "valor": 100.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 204 para o cliente Emanuel Jesus",
+    "valor": 250.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 308 para o cliente Isabel Porto",
+    "valor": 500.0
+  },
+  {
+    "tipoLancamento": "RECEITA",
+    "descricao": "Receita da reserva do quarto 234 para o cliente Luiz Miguel Lopes",
+    "valor": 250.0
+  }
+]

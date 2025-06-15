@@ -1,35 +1,30 @@
 package com.projetoprogramacaoii.model.pessoa;
 
-import java.time.LocalDate;
 import com.projetoprogramacaoii.model.Identificacao;
 
 public class Cliente extends Usuario implements Identificacao {
 
-    private static String cpf;
-    private LocalDate dataNascimento;
+    private String cpf;
+    private int anoNascimento;
 
-    public Cliente(String nome, String email, String senha, String cpf, LocalDate dataNascimento) {
+    public Cliente(String nome, String email, String senha, String cpf, int anoNascimento) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.cpf = cpf;
-        this.dataNascimento = dataNascimento;
+        this.anoNascimento = anoNascimento;
     }
 
     public String getCpf() {
         return cpf;
     }
 
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
+    public int getAnoNascimento() {
+        return anoNascimento;
     }
 
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-    
-    public void verQuartosDisponiveis() {
-        // A lógica disso ficaria no Controller/Service
+    public void setAnoNascimento(int anoNascimento) {
+        this.anoNascimento = anoNascimento;
     }
     
     public String getIdentificacao() {
@@ -42,7 +37,7 @@ public class Cliente extends Usuario implements Identificacao {
     
     @Override
     public String getId() {
-        return this.cpf; // fazer depois o id formatado
+        return this.cpf;
     }
 
 }

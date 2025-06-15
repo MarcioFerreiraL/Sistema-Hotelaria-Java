@@ -1,0 +1,834 @@
+[
+  {
+    "id": "26017293237108",
+    "cliente": {
+      "cpf": "26017293237",
+      "anoNascimento": 2002,
+      "nome": "Cecília da Mota",
+      "email": "costahelena@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 108,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "75841662923103",
+    "cliente": {
+      "cpf": "75841662923",
+      "anoNascimento": 1996,
+      "nome": "Sra. Maria Eduarda Fogaça",
+      "email": "lorenzo15@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 103,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "27681585721315",
+    "cliente": {
+      "cpf": "27681585721",
+      "anoNascimento": 1966,
+      "nome": "Luiz Felipe Barros",
+      "email": "mariaeduardadas-neves@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 315,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "99581845112211",
+    "cliente": {
+      "cpf": "99581845112",
+      "anoNascimento": 1953,
+      "nome": "Dr. Erick da Paz",
+      "email": "giovannaalmeida@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 211,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "26095646101222",
+    "cliente": {
+      "cpf": "26095646101",
+      "anoNascimento": 1989,
+      "nome": "Heloísa Moreira",
+      "email": "pietroyuri@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 222,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "24987114330221",
+    "cliente": {
+      "cpf": "24987114330",
+      "anoNascimento": 1953,
+      "nome": "Lorena Nunes",
+      "email": "mariafernandacardoso@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 221,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "01851351117116",
+    "cliente": {
+      "cpf": "01851351117",
+      "anoNascimento": 1976,
+      "nome": "Srta. Manuela Ribeiro",
+      "email": "fogaçarebeca@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 116,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "03960682245311",
+    "cliente": {
+      "cpf": "03960682245",
+      "anoNascimento": 1972,
+      "nome": "Elisa da Paz",
+      "email": "gabrielalima@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 311,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "26017293237302",
+    "cliente": {
+      "cpf": "26017293237",
+      "anoNascimento": 2002,
+      "nome": "Cecília da Mota",
+      "email": "costahelena@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 302,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "24987114330219",
+    "cliente": {
+      "cpf": "24987114330",
+      "anoNascimento": 1953,
+      "nome": "Lorena Nunes",
+      "email": "mariafernandacardoso@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 219,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "25251325275114",
+    "cliente": {
+      "cpf": "25251325275",
+      "anoNascimento": 1968,
+      "nome": "Sra. Ana Luiza da Rocha",
+      "email": "luizgustavosilva@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 114,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "75736149171205",
+    "cliente": {
+      "cpf": "75736149171",
+      "anoNascimento": 1997,
+      "nome": "Sr. Francisco Jesus",
+      "email": "benjamin79@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 205,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "54421132510310",
+    "cliente": {
+      "cpf": "54421132510",
+      "anoNascimento": 1952,
+      "nome": "Cecília Rezende",
+      "email": "diasnicolas@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 310,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "21385437335227",
+    "cliente": {
+      "cpf": "21385437335",
+      "anoNascimento": 1974,
+      "nome": "Sra. Alana Farias",
+      "email": "lucca59@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 227,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "43615434526226",
+    "cliente": {
+      "cpf": "43615434526",
+      "anoNascimento": 2002,
+      "nome": "Bryan Gonçalves",
+      "email": "luizfelipevieira@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 226,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "31461937570220",
+    "cliente": {
+      "cpf": "31461937570",
+      "anoNascimento": 1972,
+      "nome": "Dr. Luiz Otávio da Paz",
+      "email": "da-cruzisadora@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 220,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "26095646101102",
+    "cliente": {
+      "cpf": "26095646101",
+      "anoNascimento": 1989,
+      "nome": "Heloísa Moreira",
+      "email": "pietroyuri@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 102,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "34907089408229",
+    "cliente": {
+      "cpf": "34907089408",
+      "anoNascimento": 1970,
+      "nome": "Cecília da Conceição",
+      "email": "cunhalivia@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 229,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "01784533418206",
+    "cliente": {
+      "cpf": "01784533418",
+      "anoNascimento": 1974,
+      "nome": "Sra. Ana Júlia da Costa",
+      "email": "valentinasales@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 206,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "42277057271225",
+    "cliente": {
+      "cpf": "42277057271",
+      "anoNascimento": 1950,
+      "nome": "Davi Lucca Rezende",
+      "email": "giovannadas-neves@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 225,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "38927827550106",
+    "cliente": {
+      "cpf": "38927827550",
+      "anoNascimento": 1993,
+      "nome": "Rebeca da Conceição",
+      "email": "luizfernandopereira@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 106,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "32007629562210",
+    "cliente": {
+      "cpf": "32007629562",
+      "anoNascimento": 1975,
+      "nome": "Melissa da Rocha",
+      "email": "lauraaraujo@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 210,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "31461937570119",
+    "cliente": {
+      "cpf": "31461937570",
+      "anoNascimento": 1972,
+      "nome": "Dr. Luiz Otávio da Paz",
+      "email": "da-cruzisadora@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 119,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "08323215887208",
+    "cliente": {
+      "cpf": "08323215887",
+      "anoNascimento": 2001,
+      "nome": "Helena da Rocha",
+      "email": "elisaalves@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 208,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "70335029310218",
+    "cliente": {
+      "cpf": "70335029310",
+      "anoNascimento": 1952,
+      "nome": "Elisa da Mata",
+      "email": "joaogabrielcampos@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 218,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "54823933544304",
+    "cliente": {
+      "cpf": "54823933544",
+      "anoNascimento": 1989,
+      "nome": "Sra. Stella Aragão",
+      "email": "salesjoao@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 304,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "20875704153201",
+    "cliente": {
+      "cpf": "20875704153",
+      "anoNascimento": 1994,
+      "nome": "Yuri Rezende",
+      "email": "laura84@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 201,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "23793740925317",
+    "cliente": {
+      "cpf": "23793740925",
+      "anoNascimento": 1962,
+      "nome": "Levi da Conceição",
+      "email": "luizafogaça@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 317,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "88998845701306",
+    "cliente": {
+      "cpf": "88998845701",
+      "anoNascimento": 1989,
+      "nome": "Lavínia da Mata",
+      "email": "salesgiovanna@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 306,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "71358359280128",
+    "cliente": {
+      "cpf": "71358359280",
+      "anoNascimento": 1978,
+      "nome": "Marcelo Nogueira",
+      "email": "da-matahelena@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 128,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "13636735282203",
+    "cliente": {
+      "cpf": "13636735282",
+      "anoNascimento": 1963,
+      "nome": "Maria Alice Peixoto",
+      "email": "das-nevesemanuel@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 203,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "13636735282126",
+    "cliente": {
+      "cpf": "13636735282",
+      "anoNascimento": 1963,
+      "nome": "Maria Alice Peixoto",
+      "email": "das-nevesemanuel@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 126,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "49216091910214",
+    "cliente": {
+      "cpf": "49216091910",
+      "anoNascimento": 2003,
+      "nome": "Isabelly Jesus",
+      "email": "beniciocunha@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 214,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "86644026367104",
+    "cliente": {
+      "cpf": "86644026367",
+      "anoNascimento": 1999,
+      "nome": "Dra. Maria Alice Jesus",
+      "email": "marianecavalcanti@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 104,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "53181829633213",
+    "cliente": {
+      "cpf": "53181829633",
+      "anoNascimento": 1981,
+      "nome": "Clarice Caldeira",
+      "email": "darochaalexia@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 213,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "89896010729303",
+    "cliente": {
+      "cpf": "89896010729",
+      "anoNascimento": 1956,
+      "nome": "Mariane da Conceição",
+      "email": "luizmigueldas-neves@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 303,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "33658532452127",
+    "cliente": {
+      "cpf": "33658532452",
+      "anoNascimento": 1953,
+      "nome": "Heloísa da Paz",
+      "email": "costalivia@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 127,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "11158589638130",
+    "cliente": {
+      "cpf": "11158589638",
+      "anoNascimento": 1957,
+      "nome": "Sra. Laís da Rosa",
+      "email": "laura81@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 130,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "38458737380209",
+    "cliente": {
+      "cpf": "38458737380",
+      "anoNascimento": 1974,
+      "nome": "Kevin da Mata",
+      "email": "moraesmaria@example.net",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 209,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "72740702830239",
+    "cliente": {
+      "cpf": "72740702830",
+      "anoNascimento": 1999,
+      "nome": "Dra. Alana Fogaça",
+      "email": "da-pazhelisa@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 239,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "42263599187109",
+    "cliente": {
+      "cpf": "42263599187",
+      "anoNascimento": 2004,
+      "nome": "Davi Jesus",
+      "email": "alana99@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 109,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "77443313936305",
+    "cliente": {
+      "cpf": "77443313936",
+      "anoNascimento": 1982,
+      "nome": "Ana Luiza Farias",
+      "email": "giovanna51@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 305,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "57613396860228",
+    "cliente": {
+      "cpf": "57613396860",
+      "anoNascimento": 1992,
+      "nome": "Nathan da Mota",
+      "email": "melissa91@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 228,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_CREDITO"
+  },
+  {
+    "id": "04040984814301",
+    "cliente": {
+      "cpf": "04040984814",
+      "anoNascimento": 1988,
+      "nome": "Srta. Alana da Mota",
+      "email": "lorenacosta@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 301,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  },
+  {
+    "id": "77443313936316",
+    "cliente": {
+      "cpf": "77443313936",
+      "anoNascimento": 1982,
+      "nome": "Ana Luiza Farias",
+      "email": "giovanna51@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 316,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "DINHEIRO"
+  },
+  {
+    "id": "94252114757115",
+    "cliente": {
+      "cpf": "94252114757",
+      "anoNascimento": 1968,
+      "nome": "Sra. Rebeca Jesus",
+      "email": "melohelena@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 115,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "48858883584212",
+    "cliente": {
+      "cpf": "48858883584",
+      "anoNascimento": 1990,
+      "nome": "João Gabriel da Mota",
+      "email": "costaemanuelly@example.org",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 212,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "42277057271111",
+    "cliente": {
+      "cpf": "42277057271",
+      "anoNascimento": 1950,
+      "nome": "Davi Lucca Rezende",
+      "email": "giovannadas-neves@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 111,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "54823933544101",
+    "cliente": {
+      "cpf": "54823933544",
+      "anoNascimento": 1989,
+      "nome": "Sra. Stella Aragão",
+      "email": "salesjoao@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 101,
+      "tipoQuarto": "SIMPLES",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "08681123730204",
+    "cliente": {
+      "cpf": "08681123730",
+      "anoNascimento": 1952,
+      "nome": "Emanuel Jesus",
+      "email": "melohelena@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 204,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "98124578130308",
+    "cliente": {
+      "cpf": "98124578130",
+      "anoNascimento": 1968,
+      "nome": "Isabel Porto",
+      "email": "pietro46@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 308,
+      "tipoQuarto": "SUITE",
+      "ocupado": true
+    },
+    "formaPagamento": "PIX"
+  },
+  {
+    "id": "67375685210234",
+    "cliente": {
+      "cpf": "67375685210",
+      "anoNascimento": 1975,
+      "nome": "Luiz Miguel Lopes",
+      "email": "nicolas91@example.com",
+      "senha": "password"
+    },
+    "quarto": {
+      "numero": 234,
+      "tipoQuarto": "LUXO",
+      "ocupado": true
+    },
+    "formaPagamento": "CARTAO_DEBITO"
+  }
+]

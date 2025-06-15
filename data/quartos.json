@@ -1,0 +1,452 @@
+[
+  {
+    "numero": 101,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 102,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 103,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 104,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 105,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 106,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 107,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 108,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 109,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 110,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 111,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 112,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 113,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 114,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 115,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 116,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 117,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 118,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 119,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 120,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 121,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 122,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 123,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 124,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 125,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 126,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 127,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 128,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 129,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": false
+  },
+  {
+    "numero": 130,
+    "tipoQuarto": "SIMPLES",
+    "ocupado": true
+  },
+  {
+    "numero": 201,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 202,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 203,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 204,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 205,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 206,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 207,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 208,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 209,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 210,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 211,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 212,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 213,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 214,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 215,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 216,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 217,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 218,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 219,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 220,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 221,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 222,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 223,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 224,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 225,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 226,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 227,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 228,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 229,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 230,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 231,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 232,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 233,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 234,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 235,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 236,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 237,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 238,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 239,
+    "tipoQuarto": "LUXO",
+    "ocupado": true
+  },
+  {
+    "numero": 240,
+    "tipoQuarto": "LUXO",
+    "ocupado": false
+  },
+  {
+    "numero": 301,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 302,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 303,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 304,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 305,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 306,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 307,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 308,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 309,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 310,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 311,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 312,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 313,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 314,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 315,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 316,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 317,
+    "tipoQuarto": "SUITE",
+    "ocupado": true
+  },
+  {
+    "numero": 318,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 319,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  },
+  {
+    "numero": 320,
+    "tipoQuarto": "SUITE",
+    "ocupado": false
+  }
+]

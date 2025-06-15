@@ -4,59 +4,39 @@ import com.projetoprogramacaoii.model.pessoa.Cliente;
 import com.projetoprogramacaoii.model.reserva.FormaPagamento;
 import com.projetoprogramacaoii.model.reserva.Quarto;
 import com.projetoprogramacaoii.model.reserva.Reserva;
-import com.projetoprogramacaoii.repository.ClienteRepository;
 import com.projetoprogramacaoii.repository.QuartoRepository;
 import com.projetoprogramacaoii.repository.ReservaRepository;
+import com.projetoprogramacaoii.util.ValidacaoException;
+import java.io.IOException;
 import java.time.LocalDate;
-import java.time.Period;
 
 public class ReservaService {
-    private final ReservaRepository reservaRepository;
-    private final QuartoRepository quartoRepository;
-    private final ClienteRepository clienteRepository;
-    private final FinanceiroService financeiroService;
 
-    public ReservaService(ReservaRepository reservaRepository, QuartoRepository quartoRepository, ClienteRepository clienteRepository, FinanceiroService financeiroService) {
-        this.reservaRepository = reservaRepository;
-        this.quartoRepository = quartoRepository;
-        this.clienteRepository = clienteRepository;
-        this.financeiroService = financeiroService;
-    }
+    public Reserva criarReserva(Cliente cliente, Quarto quarto, FormaPagamento formaPagamento) throws ValidacaoException, IOException {
 
-    public Reserva criarReserva(String clienteCpf, int numeroQuarto, LocalDate dataReserva, FormaPagamento formaPagamento) {
-        // Busca as entidades
-        Cliente cliente = clienteRepository.encontrarId(clienteCpf);
-        Quarto quarto = quartoRepository.encontrarId(numeroQuarto);
-        
-        // verifica se a idade é maior que 18
-        if (Period.between(cliente.getDataNascimento(), LocalDate.now()).getYears() < 18) {
-            throw new IllegalStateException("Cliente deve ser maior de 18 anos para fazer uma reserva.");
-        }
-        
-        // ver se o quarto esta ocupado
-        
-        if (quarto.isOcupado() == true) {
-            throw new IllegalStateException("Quarto " + numeroQuarto + " já está ocupado.");
+        if (LocalDate.now().getYear() - cliente.getAnoNascimento() < 18) {
+            throw new ValidacaoException("Cliente deve ser maior de 18 anos para fazer uma reserva.");
         }
 
-        // 3. Orquestra as ações
-        Reserva novaReserva = new Reserva((Cliente.cpf + Quarto.numero), cliente, quarto, dataReserva, formaPagamento);
-        novaReserva.setCliente(cliente);
-        novaReserva.setQuarto(quarto);
-        novaReserva.setData(dataReserva);
-        novaReserva.setFormaPagamento(formaPagamento);
-        
-        // Salva a reserva
-        reservaRepository.salvar(novaReserva);
+        if (quarto.isOcupado()) {
+            throw new ValidacaoException("Quarto " + quarto.getNumero() + " já está ocupado.");
+        }
 
-        // Atualiza o status do quarto
+        String id = cliente.getCpf() + quarto.getNumero();
+        Reserva novaReserva = new Reserva(id, cliente, quarto, formaPagamento);
+
+        ReservaRepository.registrar(novaReserva);
+
         quarto.reservar();
-        quartoRepository.salvar(quarto);
+        QuartoRepository.atualizar(quarto);
 
-        // Registra o lançamento financeiro
-        String descricaoLancamento = "Receita da reserva do quarto " + quarto.getNumero() + " para o cliente " + cliente.getNome();
-        financeiroService.registrarReceita(quarto.getValor(), descricaoLancamento, dataReserva);
-
+        try {
+            String descricaoReceita = "Receita da reserva do quarto " + quarto.getNumero() + " para o cliente " + cliente.getNome();
+            LancamentoService.criarReceita(quarto.getValor(), descricaoReceita, LocalDate.now());
+        } catch (IOException e) {
+            throw new IOException("A reserva foi criada, mas falhou ao registrar a receita financeira. Contate o suporte.", e);
+        }
+        
         System.out.println("Reserva criada com sucesso!");
         return novaReserva;
     }

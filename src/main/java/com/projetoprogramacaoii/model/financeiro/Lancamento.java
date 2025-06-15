@@ -1,26 +1,14 @@
 package com.projetoprogramacaoii.model.financeiro;
 
-import java.time.LocalDate;
-
 public class Lancamento {
 	private TipoLancamento tipoLancamento;
 	private String descricao;
 	private double valor;
-	private LocalDate data;
 
-	public Lancamento(double valor, TipoLancamento tipoLancamento, String descricao, LocalDate data) {
+	public Lancamento(double valor, TipoLancamento tipoLancamento, String descricao) {
 		this.valor = valor;
 		this.tipoLancamento = tipoLancamento;
 		this.descricao = descricao;
-		this.data = data;
-	}
-
-	public LocalDate getData() {
-		return data;
-	}
-
-	public void setData(LocalDate data) {
-		this.data = data;
 	}
 
 	public String getDescricao() {

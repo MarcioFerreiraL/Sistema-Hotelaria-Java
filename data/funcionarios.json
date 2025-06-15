@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "Sr. Luiz Gustavo da Paz",
+    "cpf": "74880998632",
+    "cargo": "Gerente",
+    "salario": 5733.2,
+    "tipoContrato": "PJ"
+  },
+  {
+    "nome": "Isabelly da Conceição",
+    "cpf": "40049405625",
+    "cargo": "Recepcionista",
+    "salario": 2686.26,
+    "tipoContrato": "CLT"
+  },
+  {
+    "nome": "Maria Fernanda da Mota",
+    "cpf": "03838423631",
+    "cargo": "Camareira",
+    "salario": 2182.88,
+    "tipoContrato": "CLT"
+  },
+  {
+    "nome": "Sra. Alícia Jesus",
+    "cpf": "07752718606",
+    "cargo": "Cozinheiro",
+    "salario": 2697.16,
+    "tipoContrato": "CLT"
+  },
+  {
+    "nome": "Sr. Davi Lucca Nunes",
+    "cpf": "53185343419",
+    "cargo": "Manobrista",
+    "salario": 2420.08,
+    "tipoContrato": "TEMPORARIO"
+  },
+  {
+    "nome": "Dra. Valentina da Mata",
+    "cpf": "94982635670",
+    "cargo": "Segurança",
+    "salario": 2575.9,
+    "tipoContrato": "PJ"
+  }
+]

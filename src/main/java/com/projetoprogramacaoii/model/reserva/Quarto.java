@@ -1,7 +1,7 @@
 package com.projetoprogramacaoii.model.reserva;
 
 public class Quarto {
-	private static int numero;
+	private int numero;
 	private TipoQuarto tipoQuarto;
 	private boolean ocupado;
 	
