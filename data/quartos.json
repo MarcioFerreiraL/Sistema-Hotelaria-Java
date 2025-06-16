@@ -222,7 +222,7 @@
   {
     "numero": 215,
     "tipoQuarto": "LUXO",
-    "ocupado": false
+    "ocupado": true
   },
   {
     "numero": 216,

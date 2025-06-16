@@ -64,10 +64,10 @@ public class MainView {
  // Apresenta uma lista de clientes de forma formatada.
     public void exibirListaClientes(List<Cliente> clientes) {
         System.out.println("----------------------------------------------------------------------");
-        System.out.printf("%-30s | %-25s | %s%n", "Nome", "Email", "CPF");
+        System.out.printf("%-30s | %-24s | %s%n", "Nome", "Email", "CPF");
         System.out.println("----------------------------------------------------------------------");
         for (Cliente cliente : clientes) {
-            System.out.printf("%-30s | %-25s | %s%n", cliente.getNome(), cliente.getEmail(), cliente.getCpf());
+            System.out.printf("%-30s | %-35s | %s%n", cliente.getNome(), cliente.getEmail(), cliente.getCpf());
         }
         System.out.println("----------------------------------------------------------------------");
     }
