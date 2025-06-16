@@ -2,6 +2,12 @@ package com.projetoprogramacaoii.model.pessoa;
 
 import com.projetoprogramacaoii.model.Identificacao;
 
+/**
+ * Classe que representa um Cliente do hotel.
+ * Herda de Usuario, reutilizando os campos de nome, email e senha.
+ * Implementa a interface Identificacao, fornecendo uma forma de ser unicamente
+ * identificado no sistema (através do CPF).
+ */
 public class Cliente extends Usuario implements Identificacao {
 
     private String cpf;
@@ -40,4 +46,11 @@ public class Cliente extends Usuario implements Identificacao {
         return this.cpf;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "cpf='" + getCpf() + '\'' + 
+                ", " + super.toString() +
+                '}';
+    }
 }

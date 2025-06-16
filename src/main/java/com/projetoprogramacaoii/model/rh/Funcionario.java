@@ -1,7 +1,7 @@
 package com.projetoprogramacaoii.model.rh;
 
 import com.projetoprogramacaoii.model.Identificacao;
-
+// Classe que representa um Funcionário do hotel.
 public class Funcionario implements Identificacao{
 	
 	private String nome;
@@ -17,6 +17,15 @@ public class Funcionario implements Identificacao{
 		this.cargo = cargo;
 		this.salario = salario;
 		this.tipoContrato = tipoContrato;
+	}
+	
+	public Funcionario(String nome, String cpf, String cargo, double salario) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.cargo = cargo;
+		this.salario = salario;
+		this.tipoContrato = null;
 	}
 	
 	public String getNome() {
@@ -60,7 +69,7 @@ public class Funcionario implements Identificacao{
 	}
 
 	public String getId() {
-		return String.format("Id: %s\n", cpf); //mudar para cpf formatado depois
+		return String.format("Id: %s\n", cpf);
 	}
 	
 	@Override
@@ -70,5 +79,16 @@ public class Funcionario implements Identificacao{
 				"id: %s\n"
 				, nome, cpf
 				);
+	}
+	
+	@Override
+	public String toString() {
+	    return "Funcionario{" +
+	            "cpf='" + getCpf() + '\'' +
+	            ", cargo='" + cargo + '\'' +
+	            ", salario=" + salario +
+	            ", tipoContrato=" + tipoContrato +
+	            ", " + super.toString() +
+	            '}';
 	}
 }

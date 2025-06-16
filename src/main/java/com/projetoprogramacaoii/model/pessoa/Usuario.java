@@ -1,13 +1,12 @@
 package com.projetoprogramacaoii.model.pessoa;
-
+/*
+ * Classe abstrata que serve como base para todos os tipos de usuários do sistema.
+ * Define atributos e comportamentos comuns, como nome, email e senha.
+ */
 public abstract class Usuario {
 	String nome;
 	String email;
 	String senha;
-	
-	public boolean login(String nome, String email, String senha) {
-		return false;
-	}
 
 	public String getNome() {
 		return nome;
@@ -37,5 +36,9 @@ public abstract class Usuario {
 		return null;
 	}
 	
-	
+	@Override
+	public String toString() {
+	    return "nome='" + nome + '\'' +
+	            ", email='" + email + '\'';
+	}
 }

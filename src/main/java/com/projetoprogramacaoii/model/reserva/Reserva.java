@@ -1,7 +1,7 @@
 package com.projetoprogramacaoii.model.reserva;
 
 import com.projetoprogramacaoii.model.pessoa.Cliente;
-
+// Classe modelo que representa a associação entre um Cliente e um Quarto,
 public class Reserva {
 	
 	private String id;
@@ -48,7 +48,15 @@ public class Reserva {
 		this.id = id;
 	}
 	
-	
+	@Override
+	public String toString() {
+	    return "Reserva{" +
+	            "id=" + id +
+	            ", cliente=" + cliente.getNome() +
+	            ", quarto=" + quarto.getNumero() + 
+	            ", formaPagamento=" + formaPagamento +
+	            '}';
+	}
 	
 	
 	

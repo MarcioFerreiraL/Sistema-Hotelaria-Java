@@ -1,7 +1,10 @@
 package com.projetoprogramacaoii.model.pessoa;
 
 import com.projetoprogramacaoii.model.Identificacao;
-
+/*
+ * Classe que representa um usuário Administrador no sistema.
+ * Herda os atributos e métodos da classe base Usuario.
+ */
 public class Administrador extends Usuario implements Identificacao{
 	
 	protected Administrador(String nome, String email, String senha) {
@@ -23,5 +26,10 @@ public class Administrador extends Usuario implements Identificacao{
 				);
 	}
 	
-	
+	@Override
+	public String toString() {
+	    return "Administrador{" +
+	            super.toString() +
+	            '}';
+	}
 }

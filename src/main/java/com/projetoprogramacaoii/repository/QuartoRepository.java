@@ -71,4 +71,19 @@ public class QuartoRepository {
             }
         }
     }
+    
+    public static Quarto buscarPorNumero(int numero) throws IOException {
+        return ler().stream()
+                .filter(q -> q.getNumero() == numero)
+                .findFirst()
+                .orElse(null);
+    }
+
+    public static void excluir(int numero) throws IOException {
+        List<Quarto> quartos = ler();
+        boolean removido = quartos.removeIf(q -> q.getNumero() == numero);
+        if (removido) {
+            atualizarLista(quartos);
+        }
+    }
 }

@@ -1,5 +1,5 @@
 package com.projetoprogramacaoii.model.financeiro;
-
+// Classe modelo que representa uma transação financeira (uma receita ou uma despesa).
 public class Lancamento {
 	private TipoLancamento tipoLancamento;
 	private String descricao;
@@ -33,5 +33,14 @@ public class Lancamento {
 
 	public void setValor(double valor) {
 		this.valor = valor;
+	}
+	
+	@Override
+	public String toString() {
+	    return "Lancamento{" +
+	            ", valor=" + valor +
+	            ", tipoLancamento=" + tipoLancamento +
+	            ", descricao='" + descricao + '\'' +
+	            '}';
 	}
 }

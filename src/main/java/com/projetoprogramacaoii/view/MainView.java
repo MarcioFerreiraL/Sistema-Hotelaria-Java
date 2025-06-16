@@ -7,21 +7,19 @@ import com.projetoprogramacaoii.model.reserva.FormaPagamento;
 import com.projetoprogramacaoii.model.reserva.Quarto;
 import com.projetoprogramacaoii.model.reserva.Reserva;
 import com.projetoprogramacaoii.model.reserva.TipoQuarto;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+import com.projetoprogramacaoii.model.rh.TipoContrato;
 import java.util.List;
 import java.util.Scanner;
 
 public class MainView {
 
     private final Scanner scanner;
-    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public MainView() {
         this.scanner = new Scanner(System.in);
     }
 
+     // Exibe o menu principal de login e retorna a opção escolhida pelo usuário.
     public int exibirMenuLogin() {
         System.out.println("\n--- BEM-VINDO AO JAVA'S HOTEL ---");
         System.out.println("Selecione seu perfil:");
@@ -31,7 +29,7 @@ public class MainView {
         System.out.print("Escolha uma opção: ");
         return lerOpcao();
     }
-
+    // Exibe o menu de opções para o cliente.
     public int exibirMenuCliente() {
         System.out.println("\n--- MENU DO CLIENTE ---");
         System.out.println("1. Fazer meu cadastro");
@@ -41,29 +39,19 @@ public class MainView {
         System.out.print("Escolha uma opção: ");
         return lerOpcao();
     }
-    
+    // Exibe o menu de opções para o administrador.
     public int exibirMenuAdmin() {
         System.out.println("\n--- MENU DO ADMINISTRADOR ---");
         System.out.println("1. Cadastrar Cliente");
         System.out.println("2. Cadastrar Quarto");
         System.out.println("3. Criar uma Reserva");
         System.out.println("4. Ver Relatórios");
+        System.out.println("5. Alterar/Excluir Dados");
         System.out.println("0. Voltar ao menu anterior");
         System.out.print("Escolha uma opção: ");
         return lerOpcao();
     }
-    
-    public int menuAdmin() {
-        System.out.println("\n--- MENU ADMINISTRADOR ---");
-        System.out.println("1. Cadastrar Cliente");
-        System.out.println("2. Cadastrar Quarto");
-        System.out.println("3. Criar Reserva");
-        System.out.println("4. Listar Quartos Disponíveis");
-        System.out.println("5. Relatórios"); // Opção nova
-        System.out.println("0. Sair");
-        return lerInt("Escolha uma opção: ");
-    }
-    
+    // Exibe o menu de relatorios.
     public int exibirMenuRelatorios() {
         System.out.println("\n--- MENU DE RELATÓRIOS ---");
         System.out.println("1. Listar todos os Clientes");
@@ -73,38 +61,38 @@ public class MainView {
         System.out.println("0. Voltar");
         return lerInt("Escolha uma opção de relatório: ");
     }
-
+ // Apresenta uma lista de clientes de forma formatada.
     public void exibirListaClientes(List<Cliente> clientes) {
-        System.out.println("--------------------------------------------------");
-        System.out.printf("%-20s | %-25s | %s%n", "Nome", "Email", "CPF");
-        System.out.println("--------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------");
+        System.out.printf("%-30s | %-25s | %s%n", "Nome", "Email", "CPF");
+        System.out.println("----------------------------------------------------------------------");
         for (Cliente cliente : clientes) {
-            System.out.printf("%-20s | %-25s | %s%n", cliente.getNome(), cliente.getEmail(), cliente.getCpf());
+            System.out.printf("%-30s | %-25s | %s%n", cliente.getNome(), cliente.getEmail(), cliente.getCpf());
         }
-        System.out.println("--------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------");
     }
-    
+ // Apresenta uma lista de reservas de forma formatada.
     public void exibirListaReservas(List<Reserva> reservas) {
-        System.out.println("--------------------------------------------------------------------------------");
-        System.out.printf("%-15s | %-20s | %-8s | %-10s%n", "ID Reserva", "Cliente", "Quarto", "Pagamento");
-        System.out.println("--------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------");
+        System.out.printf("%-15s | %-30s | %-8s | %-10s%n", "ID Reserva", "Cliente", "Quarto", "Pagamento");
+        System.out.println("--------------------------------------------------------------------------");
         for (Reserva reserva : reservas) {
-            System.out.printf("%-15s | %-20s | %-8d | %-10s%n",
+            System.out.printf("%-15s | %-30s | %-8d | %-10s%n",
                     reserva.getId(),
                     reserva.getCliente().getNome(),
                     reserva.getQuarto().getNumero(),
                     reserva.getFormaPagamento());
         }
-        System.out.println("--------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------");
     }
-
+ // Apresenta uma lista de lancamentos de forma formatada.
     public void exibirListaLancamentos(List<Lancamento> lancamentos) {
-        System.out.println("---------------------------------------------------------------");
-        System.out.printf("%-15s | %-10s | %-15s%n", "Valor (R$)", "Tipo", "Descrição");
-        System.out.println("---------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------");
+        System.out.printf("%-15s | %-10s | %-70s%n", "Valor (R$)", "Tipo", "Descrição");
+        System.out.println("-------------------------------------------------------------------------------------------------------");
         double total = 0;
         for (Lancamento lancamento : lancamentos) {
-            System.out.printf("%-15.2f | %-10s | %-15s%n",
+            System.out.printf("%-15.2f | %-10s | %-70s%n",
                     lancamento.getValor(),
                     lancamento.getTipoLancamento(),
                     lancamento.getDescricao());
@@ -114,11 +102,11 @@ public class MainView {
                 total -= lancamento.getValor();
             }
         }
-        System.out.println("---------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------");
         System.out.printf("Saldo Total: R$ %.2f%n", total);
-        System.out.println("---------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------");
     }
-    
+    // Apresenta uma lista de clientes de forma formatada.
     public void exibirListaQuartos(List<Quarto> quartos) {
         System.out.println("\n--- LISTA DE QUARTOS ---");
         System.out.println("-----------------------------------------");
@@ -136,6 +124,55 @@ public class MainView {
 	        System.out.println("-----------------------------------------");
         }
     }
+    
+    public int exibirMenuAlterarExcluir() {
+        System.out.println("\n--- ALTERAR/EXCLUIR DADOS ---");
+        System.out.println("1. Alterar Dados");
+        System.out.println("2. Excluir Dados");
+        System.out.println("0. Voltar");
+        System.out.print("Escolha uma opção: ");
+        return lerOpcao();
+    }
+
+    public int exibirMenuQualEntidade() {
+        System.out.println("\nSelecione o tipo de dado:");
+        System.out.println("1. Cliente");
+        System.out.println("2. Quarto");
+        System.out.println("3. Funcionário");
+        System.out.println("0. Voltar");
+        System.out.print("Escolha uma opção: ");
+        return lerOpcao();
+    }
+
+    public int exibirMenuAlterarCliente() {
+        System.out.println("\nQual campo do cliente deseja alterar?");
+        System.out.println("1. Nome");
+        System.out.println("2. Email");
+        System.out.println("3. Senha");
+        System.out.println("4. Ano de Nascimento");
+        System.out.println("0. Cancelar");
+        System.out.print("Escolha uma opção: ");
+        return lerOpcao();
+    }
+
+    public int exibirMenuAlterarFuncionario() {
+        System.out.println("\nQual campo do funcionário deseja alterar?");
+        System.out.println("1. Nome");
+        System.out.println("2. Cargo");
+        System.out.println("3. Salário");
+        System.out.println("4. Tipo de Contrato");
+        System.out.println("0. Cancelar");
+        System.out.print("Escolha uma opção: ");
+        return lerOpcao();
+    }
+
+    public int exibirMenuAlterarQuarto() {
+        System.out.println("\nQual campo do quarto deseja alterar?");
+        System.out.println("1. Tipo do Quarto");
+        System.out.println("0. Cancelar");
+        System.out.print("Escolha uma opção: ");
+        return lerOpcao();
+    }
 
     public int lerOpcao() {
         try {
@@ -145,12 +182,17 @@ public class MainView {
             return -1; // Retorna um valor inválido para o loop continuar
         }
     }
-    
+    /*
+     * Lê uma string do console.
+     */
     public String lerString(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
     }
-
+    /*
+     * Lê um valor inteiro do console, tratando erros de formato.
+     * Continua pedindo a entrada até que um número válido seja inserido..
+     */
     public int lerInt(String prompt) {
         while (true) { // Loop até que uma entrada válida seja fornecida
             System.out.print(prompt);
@@ -175,21 +217,13 @@ public class MainView {
         }
     }
 
-    public LocalDate lerData(String prompt) {
-        while (true) {
-            try {
-                String dataStr = lerString(prompt + " (dd/MM/yyyy): ");
-                return LocalDate.parse(dataStr, dateFormatter);
-            } catch (DateTimeParseException e) {
-                System.out.println("Formato de data inválido. Por favor, use o formato dd/MM/yyyy.");
-            }
-        }
-    }
-
+    /*
+     * Lê um enum do tipo TipoQuarto do console.
+     */
     public TipoQuarto lerTipoQuarto() {
         while(true) {
             System.out.println("Tipos de Quarto:");
-            for (TipoQuarto tq : TipoQuarto.values()) {
+            for (TipoQuarto tq : TipoQuarto.values()) { // .values() retorna um array
                 System.out.println(tq.ordinal() + ". " + tq.name());
             }
             int escolha = lerInt("Escolha o tipo: ");
@@ -214,10 +248,27 @@ public class MainView {
         }
     }
     
+    public TipoContrato lerTipoContrato() {
+        while(true) {
+            System.out.println("Tipos de Contrato:");
+            for (TipoContrato tc : TipoContrato.values()) {
+                System.out.println(tc.ordinal() + ". " + tc.name());
+            }
+            int escolha = lerInt("Escolha o tipo de contrato: ");
+            if (escolha >= 0 && escolha < TipoContrato.values().length) {
+                return TipoContrato.values()[escolha];
+            }
+            System.out.println("Opção inválida.");
+        }
+    }
+    // Exibe uma mensagem genérica no console
     public void exibirMensagem(String mensagem) {
         System.out.println(mensagem);
     }
-    
+    /*
+     * Fecha o recurso Scanner para evitar vazamento de memória.
+     * Deve ser chamado ao final da execução do programa.
+     */
     public void fecharScanner() {
         scanner.close();
     }

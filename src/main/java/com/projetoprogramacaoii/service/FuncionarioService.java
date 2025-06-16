@@ -10,7 +10,7 @@ import com.projetoprogramacaoii.util.ValidacaoException;
 public class FuncionarioService {
 
 	public void criarFuncionario(String nome, String cpf, String cargo, double salario, TipoContrato tipoContrato) throws ValidacaoException, IOException {
-		// VALIDAÇÕES ADICIONADAS
+		// VALIDAÇÕES
 		if (nome == null || nome.trim().isEmpty()) {
             throw new ValidacaoException("O nome do funcionário não pode estar vazio.");
         }
@@ -34,5 +34,38 @@ public class FuncionarioService {
 		} catch (IOException e) {
 			throw new IOException("Falha ao registrar funcionário ou seu salário no sistema.", e);
 		}
+	}
+	
+	public static void alterarFuncionario(String cpf, int campo, Object novoValor) throws ValidacaoException, IOException {
+	    Funcionario funcionario = FuncionarioRepository.buscarPorCpf(cpf);
+	    if (funcionario == null) {
+	        throw new ValidacaoException("Funcionário com CPF " + cpf + " não encontrado.");
+	    }
+
+	    switch (campo) {
+	        case 1: // Nome
+	            funcionario.setNome((String) novoValor);
+	            break;
+	        case 2: // Cargo
+	            funcionario.setCargo((String) novoValor);
+	            break;
+	        case 3: // Salário
+	            double novoSalario = (Double) novoValor;
+	            if (novoSalario <= 0) {
+	                throw new ValidacaoException("O salário deve ser um valor positivo.");
+	            }
+	            funcionario.setSalario(novoSalario);
+	            break;
+	        case 4: // Tipo de Contrato
+	            funcionario.setTipoContrato((TipoContrato) novoValor);
+	            break;
+	        default:
+	            throw new ValidacaoException("Campo inválido para alteração.");
+	    }
+	    FuncionarioRepository.atualizar(funcionario);
+	}
+
+	public static void excluirFuncionario(String cpf) throws IOException {
+	    FuncionarioRepository.excluir(cpf);
 	}
 }

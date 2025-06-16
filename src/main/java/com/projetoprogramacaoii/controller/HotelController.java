@@ -11,6 +11,7 @@ import com.projetoprogramacaoii.repository.LancamentoRepository;
 import com.projetoprogramacaoii.repository.QuartoRepository;
 import com.projetoprogramacaoii.repository.ReservaRepository;
 import com.projetoprogramacaoii.service.ClienteService;
+import com.projetoprogramacaoii.service.FuncionarioService;
 import com.projetoprogramacaoii.service.QuartoService;
 import com.projetoprogramacaoii.service.ReservaService;
 import com.projetoprogramacaoii.util.ValidacaoException;
@@ -27,13 +28,18 @@ public class HotelController {
     private final QuartoService quartoService;
     private final ReservaService reservaService;
 
+    // Construtor que inicializa a view e os serviços
     public HotelController(MainView view) {
         this.view = view;
         this.clienteService = new ClienteService();
         this.quartoService = new QuartoService();
         this.reservaService = new ReservaService();
     }
-
+    /*
+     * Inicia o loop principal da aplicação, exibindo o menu de login
+     * e direcionando o fluxo com base na escolha do usuário.
+     */
+    
     public void iniciar() {
         int opcao;
         do {
@@ -54,7 +60,9 @@ public class HotelController {
         } while (opcao != 0);
         view.fecharScanner();
     }
-
+    /*
+     * Gerencia o menu para clientes.
+     */
     private void executarMenuCliente() {
         int opcao;
         do {
@@ -77,6 +85,9 @@ public class HotelController {
             }
         } while (opcao != 0);
     }
+    /*
+     * Gerencia o menu para administradores.
+     */
 
     private void executarMenuAdmin() {
         int opcao;
@@ -95,6 +106,9 @@ public class HotelController {
                 case 4:
                     executarMenuRelatorios();
                     break;
+                case 5:
+                    executarMenuAlterarExcluir();
+                    break;
                 case 0:
                     view.exibirMensagem("Voltando ao menu principal...");
                     break;
@@ -102,6 +116,166 @@ public class HotelController {
                     view.exibirMensagem("Opção inválida. Tente novamente.");
             }
         } while (opcao != 0);
+    }
+  
+    //Orquestra as operações de alteração de dados (cliente, quarto, etc.).
+
+    private void executarMenuAlterarExcluir() {
+        int opcao;
+        do {
+            opcao = view.exibirMenuAlterarExcluir();
+            switch (opcao) {
+                case 1:
+                    alterarDados();
+                    break;
+                case 2:
+                    excluirDados();
+                    break;
+                case 0:
+                    view.exibirMensagem("Voltando ao menu do administrador...");
+                    break;
+                default:
+                    view.exibirMensagem("Opção inválida. Tente novamente.");
+            }
+        } while (opcao != 0);
+    }
+
+    private void alterarDados() {
+        int opcao = view.exibirMenuQualEntidade();
+        switch (opcao) {
+            case 1:
+                alterarCliente();
+                break;
+            case 2:
+                alterarQuarto();
+                break;
+            case 3:
+                alterarFuncionario();
+                break;
+            case 0:
+                return;
+            default:
+                view.exibirMensagem("Opção inválida.");
+        }
+    }
+ 
+    // Orquestra as operações de exclusão de dados.
+    
+    private void excluirDados() {
+        int opcao = view.exibirMenuQualEntidade();
+        switch (opcao) {
+            case 1:
+                excluirCliente();
+                break;
+            case 2:
+                excluirQuarto();
+                break;
+            case 3:
+                excluirFuncionario();
+                break;
+            case 0:
+                return;
+            default:
+                view.exibirMensagem("Opção inválida.");
+        }
+    }
+
+    private void alterarCliente() {
+        view.exibirMensagem("\n--- ALTERAR CLIENTE ---");
+        try {
+            String cpf = view.lerString("Digite o CPF do cliente a ser alterado: ");
+            int campo = view.exibirMenuAlterarCliente();
+            if (campo == 0) return;
+
+            String novoValor = view.lerString("Digite o novo valor: ");
+            clienteService.alterarCliente(cpf, campo, novoValor);
+            view.exibirMensagem("Cliente alterado com sucesso!");
+        } catch (Exception e) {
+            view.exibirMensagem("Erro: " + e.getMessage());
+        }
+    }
+
+    private void alterarQuarto() {
+        view.exibirMensagem("\n--- ALTERAR QUARTO ---");
+        try {
+            int numero = view.lerInt("Digite o número do quarto a ser alterado: ");
+            int campo = view.exibirMenuAlterarQuarto();
+            if (campo == 0) return;
+            
+            TipoQuarto novoTipo = view.lerTipoQuarto();
+            quartoService.alterarQuarto(numero, novoTipo);
+            view.exibirMensagem("Quarto alterado com sucesso!");
+        } catch (Exception e) {
+            view.exibirMensagem("Erro: " + e.getMessage());
+        }
+    }
+
+    private void alterarFuncionario() {
+        view.exibirMensagem("\n--- ALTERAR FUNCIONÁRIO ---");
+        try {
+            String cpf = view.lerString("Digite o CPF do funcionário a ser alterado: ");
+            int campo = view.exibirMenuAlterarFuncionario();
+            if (campo == 0) return;
+
+            Object novoValor;
+            if (campo == 1 || campo == 2) { // Nome ou Cargo
+                novoValor = view.lerString("Digite o novo valor: ");
+            } else if (campo == 3) { // Salário
+                novoValor = view.lerDouble("Digite o novo salário: ");
+            } else if (campo == 4) { // Tipo de Contrato
+                novoValor = view.lerTipoContrato();
+            } else {
+                view.exibirMensagem("Opção de campo inválida.");
+                return;
+            }
+            
+            FuncionarioService.alterarFuncionario(cpf, campo, novoValor);
+            view.exibirMensagem("Funcionário alterado com sucesso!");
+        } catch (Exception e) {
+            view.exibirMensagem("Erro: " + e.getMessage());
+        }
+    }
+
+    private void excluirCliente() {
+        view.exibirMensagem("\n--- EXCLUIR CLIENTE ---");
+        try {
+            String cpf = view.lerString("Digite o CPF do cliente a ser excluído: ");
+            String confirmacao = view.lerString("Tem certeza que deseja excluir? (S/N): ");
+            if (confirmacao.equalsIgnoreCase("S")) {
+                clienteService.excluirCliente(cpf);
+                view.exibirMensagem("Cliente excluído com sucesso!");
+            }
+        } catch (Exception e) {
+            view.exibirMensagem("Erro: " + e.getMessage());
+        }
+    }
+
+    private void excluirQuarto() {
+        view.exibirMensagem("\n--- EXCLUIR QUARTO ---");
+        try {
+            int numero = view.lerInt("Digite o número do quarto a ser excluído: ");
+            String confirmacao = view.lerString("Tem certeza que deseja excluir? (S/N): ");
+            if (confirmacao.equalsIgnoreCase("S")) {
+                quartoService.excluirQuarto(numero);
+                view.exibirMensagem("Quarto excluído com sucesso!");
+            }
+        } catch (Exception e) {
+            view.exibirMensagem("Erro: " + e.getMessage());
+        }
+    }
+
+    private void excluirFuncionario() {
+        view.exibirMensagem("\n--- EXCLUIR FUNCIONÁRIO ---");
+        try {
+            String cpf = view.lerString("Digite o CPF do funcionário a ser excluído: ");
+            String confirmacao = view.lerString("Tem certeza que deseja excluir? (S/N): ");
+            if (confirmacao.equalsIgnoreCase("S")) {
+                FuncionarioService.excluirFuncionario(cpf);
+                view.exibirMensagem("Funcionário excluído com sucesso!");
+            }
+        } catch (Exception e) {
+            view.exibirMensagem("Erro: " + e.getMessage());
+        }
     }
     
     private void executarMenuRelatorios() {
@@ -130,7 +304,6 @@ public class HotelController {
         } while (opcao != 0);
     }
     
-    // NOVO MÉTODO: Gera o relatório de clientes
     private void relatorioClientes() {
         view.exibirMensagem("\n--- RELATÓRIO DE CLIENTES ---");
         try {
@@ -146,7 +319,6 @@ public class HotelController {
         }
     }
 
-    // NOVO MÉTODO: Gera o relatório de quartos
     private void relatorioQuartos() {
         view.exibirMensagem("\n--- RELATÓRIO DE QUARTOS ---");
         try {
@@ -161,8 +333,7 @@ public class HotelController {
             view.exibirMensagem("Erro ao gerar relatório de quartos: " + e.getMessage());
         }
     }
-
-    // NOVO MÉTODO: Gera o relatório de reservas
+    
     private void relatorioReservas() {
         view.exibirMensagem("\n--- RELATÓRIO DE RESERVAS ---");
         try {
@@ -192,7 +363,10 @@ public class HotelController {
             view.exibirMensagem("Erro ao gerar relatório financeiro: " + e.getMessage());
         }
     }
-    
+    /**
+     * Coleta os dados do usuário e chama o serviço para criar um novo cliente.
+     * Trata exceções de validação.
+     */
     private void criarNovoCliente() {
         view.exibirMensagem("\n--- CADASTRO DE CLIENTE ---");
         try {
@@ -211,7 +385,9 @@ public class HotelController {
             view.exibirMensagem("Erro de sistema ao salvar o cliente: " + e.getMessage());
         }
     }
-
+    
+    // Coleta os dados e chama o serviço para criar um novo quarto.
+ 
     private void criarNovoQuarto() {
         view.exibirMensagem("\n--- CADASTRO DE QUARTO ---");
         try {
@@ -227,7 +403,7 @@ public class HotelController {
             view.exibirMensagem("Erro de sistema ao salvar o quarto: " + e.getMessage());
         }
     }
-
+    // Busca e exibe os quartos que não estão ocupados.
     private void listarQuartosDisponiveis() {
         try {
             List<Quarto> todosOsQuartos = QuartoRepository.ler();
@@ -241,7 +417,14 @@ public class HotelController {
             view.exibirMensagem("Erro ao ler os dados dos quartos: " + e.getMessage());
         }
     }
-
+    /*
+     * Orquestra o complexo processo de criar uma reserva:
+     * 1. Valida a existência do cliente.
+     * 2. Mostra quartos disponíveis.
+     * 3. Valida a escolha do quarto.
+     * 4. Chama o serviço de reserva.
+     * 5. Trata múltiplos tipos de exceção.
+     */
     private void criarNovaReserva() {
         view.exibirMensagem("\n--- CRIAR NOVA RESERVA ---");
         try {
@@ -260,8 +443,6 @@ public class HotelController {
                  .findFirst()
                  .orElseThrow(() -> new ValidacaoException("Quarto não encontrado, inválido ou já está ocupado!"));
 
-            // A linha que solicitava a data foi removida.
-            // Agora o sistema pergunta a forma de pagamento:
             FormaPagamento formaPagamento = view.lerFormaPagamento(); 
             
             reservaService.criarReserva(clienteDaReserva, quartoEscolhido, formaPagamento); //
@@ -276,4 +457,6 @@ public class HotelController {
             e.printStackTrace();
         }
     }
+    
+    
 }

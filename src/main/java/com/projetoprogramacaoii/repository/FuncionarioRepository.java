@@ -63,4 +63,30 @@ public class FuncionarioRepository {
             GSON.toJson(funcionarios, writer);
         }
     }
+    
+    public static Funcionario buscarPorCpf(String cpf) throws IOException {
+        return ler().stream()
+                .filter(f -> f.getCpf().equals(cpf))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public static void atualizar(Funcionario funcionarioAtualizado) throws IOException {
+        List<Funcionario> funcionarios = ler();
+        for (int i = 0; i < funcionarios.size(); i++) {
+            if (funcionarios.get(i).getCpf().equals(funcionarioAtualizado.getCpf())) {
+                funcionarios.set(i, funcionarioAtualizado);
+                atualizarLista(funcionarios);
+                return;
+            }
+        }
+    }
+
+    public static void excluir(String cpf) throws IOException {
+        List<Funcionario> funcionarios = ler();
+        boolean removido = funcionarios.removeIf(f -> f.getCpf().equals(cpf));
+        if (removido) {
+            atualizarLista(funcionarios);
+        }
+    }
 }
